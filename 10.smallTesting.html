@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript addEventListener()</h2>
+
+<p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+<button id="myBtn">Try it</button>
+
+
+<p id="demo"></p>
+
+<button id="newBtn">Now try this</button>
+<div id = "div1"></div>
+
+<script>
+document.getElementById("myBtn").addEventListener("click", displayDate);
+document.getElementById("newBtn").addEventListener("click", attachEventsListeners);
+
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+function attachEventsListeners() {
+    document.getElementById("div1").innerHTML = "Hello there!";
+    
+    const creation = document.createElement("p");
+    creation.innerHTML = "You have just created me!";
+    document.getElementById("div1").appendChild(creation);
+}
+</script>
+
+</body>
+</html> 
